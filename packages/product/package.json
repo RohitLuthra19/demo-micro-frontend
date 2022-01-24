@@ -1,12 +1,12 @@
 {
   "name": "product",
-  "description": "Universal React App Generator",
+  "description": "Product app",
   "version": "0.0.0",
   "private": true,
   "author": {
     "name": "Rohit Luthra",
     "email": "rohit.luthra19@gmail.com",
-    "url": "https://github.com/demo-micro-frontend"
+    "url": "https://github.com/RohitLuthra19/demo-micro-frontend"
   },
   "devDependencies": {
     "@types/babel__core": "^7.1.16",
@@ -27,13 +27,29 @@
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.prod.js",
     "serve": "serve dist -p 3001",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "lint": "node scripts/eslint",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.3",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
-    "react-router-dom": "^6.1.0"
+    "react-router-dom": "^6.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-jest": "24.4.2",
+    "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.2",
+    "lint-staged": "11.1.2",
+    "prettier": "2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
